@@ -84,7 +84,6 @@ class GCloudFile(File):
 
     def close(self):
         if self._dirty:
-            self._update_blob()
             self._dirty = False
 
         super(GCloudFile, self).close()
